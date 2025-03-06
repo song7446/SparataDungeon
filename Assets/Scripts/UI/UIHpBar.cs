@@ -6,9 +6,14 @@ using UnityEngine.UI;
 public class UIHpBar : MonoBehaviour
 {
     Image hpBarImage;
-    
-    void UpdateHpBar()
+
+    private void Awake()
     {
-        hpBarImage.fillAmount = 1f;
+        hpBarImage = GetComponent<Image>();
+    }
+
+    private void UpdateHpBar(float amount)
+    {
+        hpBarImage.fillAmount = amount;
     }
 }

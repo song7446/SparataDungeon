@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
     }
 
     public UIHpBar uIHpBar;
+    public UIEnergyBar uIEnergyBar;
 
     private void Awake()
     {
@@ -33,5 +34,6 @@ public class UIManager : MonoBehaviour
         }
 
         uIHpBar = GetComponentInChildren<UIHpBar>();
+        uIEnergyBar = GetComponentInChildren<UIEnergyBar>();
     }
 }

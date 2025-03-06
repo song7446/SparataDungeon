@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8255e48f9ef53924c8b92c840bd8f7bd, type: 3}
   m_Name: Roads
   m_EditorClassIdentifier: 
-  displayName: 
-  description: 
+  displayName: "\uAE38"
+  description: "\uC0AC\uB78C\uB4E4\uC774 \uB2E4\uB2C8\uB294 \uAE38\uC785\uB2C8\uB2E4."

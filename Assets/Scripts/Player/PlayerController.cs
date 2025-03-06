@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _speed = 3f;
     [SerializeField] private float jumpPower = 3f;
     [SerializeField] private LayerMask roadLayerMask;
+    bool isRun = false;
 
     [Header("Look")]
     [SerializeField] private Transform cameraContainer;
@@ -34,18 +35,11 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        UIManager.Instance.uIEnergyBar.UpdateHpBar((isRun ? -1 : 1) * Time.deltaTime * 0.1f);
     }
     private void LateUpdate()
     {
         CameraLook();
-    }
-
-    void Move()
-    {
-        Vector3 direction = transform.forward * curInput.y + transform.right * curInput.x;
-        direction *= _speed;
-        direction.y = _rigidbody.velocity.y;
-        _rigidbody.velocity = direction;
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -68,10 +62,32 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnDash(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed)
+        {
+            _speed *= 2f;
+            isRun = true;
+
+        }
+        else if (context.phase == InputActionPhase.Canceled)
+        {
+            _speed = 3f;
+            isRun = false;
+        }
+    }
+    void Move()
+    {
+        Vector3 direction = transform.forward * curInput.y + transform.right * curInput.x;
+        direction *= _speed;
+        direction.y = _rigidbody.velocity.y;
+        _rigidbody.velocity = direction;
+    }
+
+
     bool OnGround()
     {
         Ray ray = new Ray(transform.position + (-transform.up * 0.45f), Vector3.down);
-        Debug.Log(ray);
         return Physics.Raycast(ray, 0.1f, roadLayerMask);
     }
 
