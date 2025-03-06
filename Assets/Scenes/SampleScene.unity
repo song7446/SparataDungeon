@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 200278505}
   - component: {fileID: 200278504}
   - component: {fileID: 200278506}
+  - component: {fileID: 200278507}
   m_Layer: 7
   m_Name: Building_Restaurant
   m_TagString: Untagged
@@ -264,6 +265,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.3578935, y: 10.411013, z: 7.4074726}
   m_Center: {x: -0.0225451, y: 5.2054796, z: 0.28388584}
+--- !u!114 &200278507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200278502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: c58d976470c92d14baa56fafbad2c72a, type: 2}
 --- !u!1 &276590902
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,6 +364,7 @@ GameObject:
   - component: {fileID: 343777596}
   - component: {fileID: 343777595}
   - component: {fileID: 343777597}
+  - component: {fileID: 343777598}
   m_Layer: 7
   m_Name: Building_Pizza
   m_TagString: Untagged
@@ -443,6 +458,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 14.971008, y: 7.7953634, z: 13.567871}
   m_Center: {x: -0.69062805, y: 3.8976827, z: 0.07848716}
+--- !u!114 &343777598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343777593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: c58d976470c92d14baa56fafbad2c72a, type: 2}
 --- !u!1 &355133181
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +520,7 @@ GameObject:
   - component: {fileID: 427090697}
   - component: {fileID: 427090696}
   - component: {fileID: 427090698}
+  - component: {fileID: 427090699}
   m_Layer: 6
   m_Name: Road Lane_01 (4)
   m_TagString: Untagged
@@ -586,6 +615,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: e3c71c50de390ec4190b877211ba0717, type: 3}
+--- !u!114 &427090699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427090694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: 4203ce09ec99be34f9630069430a0188, type: 2}
 --- !u!1 &482691663
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +715,7 @@ GameObject:
   - component: {fileID: 488563693}
   - component: {fileID: 488563692}
   - component: {fileID: 488563694}
+  - component: {fileID: 488563695}
   m_Layer: 6
   m_Name: Road T_Intersection_01 (2)
   m_TagString: Untagged
@@ -767,6 +810,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 4026b0b37aa0fed4d95ed976da00e63f, type: 3}
+--- !u!114 &488563695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488563690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: 4203ce09ec99be34f9630069430a0188, type: 2}
 --- !u!1 &522099317
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,6 +835,7 @@ GameObject:
   - component: {fileID: 522099320}
   - component: {fileID: 522099319}
   - component: {fileID: 522099321}
+  - component: {fileID: 522099322}
   m_Layer: 6
   m_Name: Road Lane_01 (5)
   m_TagString: Untagged
@@ -873,6 +930,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: e3c71c50de390ec4190b877211ba0717, type: 3}
+--- !u!114 &522099322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522099317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: 4203ce09ec99be34f9630069430a0188, type: 2}
 --- !u!1 &580396208
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,6 +955,7 @@ GameObject:
   - component: {fileID: 580396211}
   - component: {fileID: 580396210}
   - component: {fileID: 580396212}
+  - component: {fileID: 580396213}
   m_Layer: 6
   m_Name: Road Lane_01 (8)
   m_TagString: Untagged
@@ -979,6 +1050,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: e3c71c50de390ec4190b877211ba0717, type: 3}
+--- !u!114 &580396213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580396208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: 4203ce09ec99be34f9630069430a0188, type: 2}
 --- !u!1 &608894343
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,6 +1075,7 @@ GameObject:
   - component: {fileID: 608894346}
   - component: {fileID: 608894345}
   - component: {fileID: 608894347}
+  - component: {fileID: 608894348}
   m_Layer: 6
   m_Name: Road Lane_01 (2)
   m_TagString: Untagged
@@ -1085,6 +1170,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: e3c71c50de390ec4190b877211ba0717, type: 3}
+--- !u!114 &608894348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608894343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: 4203ce09ec99be34f9630069430a0188, type: 2}
 --- !u!1 &641500084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,6 +1278,7 @@ GameObject:
   - component: {fileID: 695080305}
   - component: {fileID: 695080304}
   - component: {fileID: 695080306}
+  - component: {fileID: 695080307}
   m_Layer: 7
   m_Name: Building Sky_small_color03
   m_TagString: Untagged
@@ -1273,6 +1372,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 12.999999, y: 16.928885, z: 13.065446}
   m_Center: {x: 0.000009059905, y: 8.464442, z: 0.47563595}
+--- !u!114 &695080307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695080302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: c58d976470c92d14baa56fafbad2c72a, type: 2}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,6 +1616,7 @@ GameObject:
   - component: {fileID: 970520640}
   - component: {fileID: 970520639}
   - component: {fileID: 970520641}
+  - component: {fileID: 970520642}
   m_Layer: 6
   m_Name: Road Lane_01 (6)
   m_TagString: Untagged
@@ -1598,6 +1711,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: e3c71c50de390ec4190b877211ba0717, type: 3}
+--- !u!114 &970520642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970520637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: 4203ce09ec99be34f9630069430a0188, type: 2}
 --- !u!1 &1042084844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,6 +1736,7 @@ GameObject:
   - component: {fileID: 1042084847}
   - component: {fileID: 1042084846}
   - component: {fileID: 1042084848}
+  - component: {fileID: 1042084849}
   m_Layer: 6
   m_Name: Road Lane_01 (7)
   m_TagString: Untagged
@@ -1704,6 +1831,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: e3c71c50de390ec4190b877211ba0717, type: 3}
+--- !u!114 &1042084849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042084844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: 4203ce09ec99be34f9630069430a0188, type: 2}
 --- !u!1 &1122290639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1918,6 +2058,7 @@ GameObject:
   - component: {fileID: 1222038557}
   - component: {fileID: 1222038556}
   - component: {fileID: 1222038558}
+  - component: {fileID: 1222038559}
   m_Layer: 6
   m_Name: Road Lane_01 (3)
   m_TagString: Untagged
@@ -2012,6 +2153,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: e3c71c50de390ec4190b877211ba0717, type: 3}
+--- !u!114 &1222038559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222038554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: 4203ce09ec99be34f9630069430a0188, type: 2}
 --- !u!1 &1273448748
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,6 +2253,7 @@ GameObject:
   - component: {fileID: 1419480989}
   - component: {fileID: 1419480988}
   - component: {fileID: 1419480990}
+  - component: {fileID: 1419480991}
   m_Layer: 6
   m_Name: Road Intersection_01 (1)
   m_TagString: Untagged
@@ -2193,6 +2348,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: dd3c656fc0e01f746b07825c92b09beb, type: 3}
+--- !u!114 &1419480991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419480986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: 4203ce09ec99be34f9630069430a0188, type: 2}
 --- !u!1 &1433290092
 GameObject:
   m_ObjectHideFlags: 0
@@ -2271,6 +2439,7 @@ GameObject:
   - component: {fileID: 1485651409}
   - component: {fileID: 1485651408}
   - component: {fileID: 1485651410}
+  - component: {fileID: 1485651411}
   m_Layer: 6
   m_Name: Road T_Intersection_01 (1)
   m_TagString: Untagged
@@ -2365,6 +2534,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 4026b0b37aa0fed4d95ed976da00e63f, type: 3}
+--- !u!114 &1485651411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485651406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: 4203ce09ec99be34f9630069430a0188, type: 2}
 --- !u!1 &1527809427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2378,6 +2560,7 @@ GameObject:
   - component: {fileID: 1527809430}
   - component: {fileID: 1527809429}
   - component: {fileID: 1527809432}
+  - component: {fileID: 1527809433}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2550,6 +2733,23 @@ MonoBehaviour:
   lookSensitivity: 0.1
   minCameraX: -65
   maxCameraX: 65
+--- !u!114 &1527809433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527809427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579897fd3cf29de47bb41e4fb0a42d53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 192
+  nameText: {fileID: 2098848600}
+  descriptionText: {fileID: 1171007156}
 --- !u!1 &1608988275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2562,6 +2762,7 @@ GameObject:
   - component: {fileID: 1608988278}
   - component: {fileID: 1608988277}
   - component: {fileID: 1608988279}
+  - component: {fileID: 1608988280}
   m_Layer: 6
   m_Name: Road Intersection_01 (2)
   m_TagString: Untagged
@@ -2656,6 +2857,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: dd3c656fc0e01f746b07825c92b09beb, type: 3}
+--- !u!114 &1608988280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608988275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: 4203ce09ec99be34f9630069430a0188, type: 2}
 --- !u!1 &1641929417
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,6 +2951,7 @@ GameObject:
   - component: {fileID: 1902419609}
   - component: {fileID: 1902419608}
   - component: {fileID: 1902419610}
+  - component: {fileID: 1902419611}
   m_Layer: 7
   m_Name: Building_Gift Shop
   m_TagString: Untagged
@@ -2830,6 +3045,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 11.218783, y: 6.499003, z: 10.571993}
   m_Center: {x: -0.000018596647, y: 3.2495005, z: 0.36198518}
+--- !u!114 &1902419611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902419606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: c58d976470c92d14baa56fafbad2c72a, type: 2}
 --- !u!1 &1903280631
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,6 +3070,7 @@ GameObject:
   - component: {fileID: 1903280634}
   - component: {fileID: 1903280633}
   - component: {fileID: 1903280635}
+  - component: {fileID: 1903280636}
   m_Layer: 6
   m_Name: Road Lane_01 (1)
   m_TagString: Untagged
@@ -2936,6 +3165,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: e3c71c50de390ec4190b877211ba0717, type: 3}
+--- !u!114 &1903280636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903280631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: 4203ce09ec99be34f9630069430a0188, type: 2}
 --- !u!1 &1911878079
 GameObject:
   m_ObjectHideFlags: 0
@@ -3261,6 +3503,7 @@ GameObject:
   - component: {fileID: 2140169662}
   - component: {fileID: 2140169661}
   - component: {fileID: 2140169663}
+  - component: {fileID: 2140169664}
   m_Layer: 7
   m_Name: Building_Coffee Shop
   m_TagString: Untagged
@@ -3354,6 +3597,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 19.375298, y: 7.0017276, z: 12.457808}
   m_Center: {x: -0.32732582, y: 3.5000346, z: 0.15602803}
+--- !u!114 &2140169664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140169659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7050e118baa5c24d96578d1906bede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectdata: {fileID: 11400000, guid: c58d976470c92d14baa56fafbad2c72a, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
