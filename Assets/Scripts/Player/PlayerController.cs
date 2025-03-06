@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
     bool OnGround()
     {
-        Ray ray = new Ray(transform.position + (-transform.up * 0.4f), Vector3.down);
+        Ray ray = new Ray(transform.position + (-transform.up * 0.45f), Vector3.down);
         Debug.Log(ray);
         return Physics.Raycast(ray, 0.1f, roadLayerMask);
     }
