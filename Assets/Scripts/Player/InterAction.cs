@@ -36,13 +36,13 @@ public class InterAction : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 1f, layerMask))
         {
             promtGO.SetActive(true);
-            UpdatePrompt(hit.collider.GetComponent<MapObject>());
+            UpdatePrompt(hit.collider.GetComponent<InteractableObject>());
         }
     }
 
-    void UpdatePrompt(MapObject mapObject)
+    void UpdatePrompt(InteractableObject interactableObject)
     {
-        nameText.text = mapObject.GetObjectName();
-        descriptionText.text = mapObject.GetObjectDescription();
+        nameText.text = interactableObject.GetObjectName();
+        descriptionText.text = interactableObject.GetObjectDescription();
     }
 }

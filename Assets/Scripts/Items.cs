@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MapObject : MonoBehaviour, InteractableObject
+public class Items : MonoBehaviour,InteractableObject
 {
-    [SerializeField] ObjectData objectdata;
-
+    [SerializeField] ItemData itemData;
     public string GetObjectName()
     {
-        return objectdata.displayName;
+        return itemData.displayName;
     }
 
     public string GetObjectDescription()
     {
-        return objectdata.description;
+        return itemData.description;
     }
+
 }

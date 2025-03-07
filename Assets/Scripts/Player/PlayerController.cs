@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (context.phase == InputActionPhase.Canceled)
         {
-            _speed /= 2f;
+            _speed = 3f;
             isRun = false;
         }
     }
