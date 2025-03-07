@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InterAction : MonoBehaviour
 {
     Camera camera;
-    [SerializeField]LayerMask layerMask;
+    [SerializeField] LayerMask layerMask;
     [SerializeField] GameObject promtGO;
-    [SerializeField]TextMeshProUGUI nameText;
-    [SerializeField]TextMeshProUGUI descriptionText;
+    [SerializeField] TextMeshProUGUI nameText;
+    [SerializeField] TextMeshProUGUI descriptionText;
+    GameObject curLookObject;
 
     private void Awake()
     {
@@ -36,13 +38,34 @@ public class InterAction : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 1f, layerMask))
         {
             promtGO.SetActive(true);
+            curLookObject = hit.transform.gameObject;
             UpdatePrompt(hit.collider.GetComponent<InteractableObject>());
+        }
+        else
+        {
+            ClearPrompt();
+            curLookObject = null;
+            promtGO.SetActive(false);
         }
     }
 
-    void UpdatePrompt(InteractableObject interactableObject)
+    void UpdatePrompt(InteractableObject mapObject)
     {
-        nameText.text = interactableObject.GetObjectName();
-        descriptionText.text = interactableObject.GetObjectDescription();
+        nameText.text = mapObject.GetObjectName();
+        descriptionText.text = mapObject.GetObjectDescription();
+    }
+
+    void ClearPrompt()
+    {
+        nameText.text = "";
+        descriptionText.text = "";
+    }
+
+    void OnInterAction(InputAction.CallbackContext context)
+    {
+        if(curLookObject != null)
+        {
+
+        }
     }
 }
