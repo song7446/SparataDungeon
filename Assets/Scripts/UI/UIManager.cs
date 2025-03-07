@@ -18,8 +18,8 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public UIHpBar uIHpBar;
-    public UIEnergyBar uIEnergyBar;
+    public UIState uiHp;
+    public UIState uiEnergy;
 
     private void Awake()
     {
@@ -32,8 +32,5 @@ public class UIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        uIHpBar = GetComponentInChildren<UIHpBar>();
-        uIEnergyBar = GetComponentInChildren<UIEnergyBar>();
     }
 }

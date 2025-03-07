@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _speed = 3f;
     [SerializeField] private float jumpPower = 3f;
     [SerializeField] private LayerMask roadLayerMask;
-    bool isRun = false;
+    public bool isRun = false;
 
     [Header("Look")]
     [SerializeField] private Transform cameraContainer;
@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-        UIManager.Instance.uIEnergyBar.UpdateHpBar((isRun ? -1 : 1) * Time.deltaTime * 0.1f);
     }
     private void LateUpdate()
     {
@@ -68,11 +67,10 @@ public class PlayerController : MonoBehaviour
         {
             _speed *= 2f;
             isRun = true;
-
         }
         else if (context.phase == InputActionPhase.Canceled)
         {
-            _speed = 3f;
+            _speed /= 2f;
             isRun = false;
         }
     }

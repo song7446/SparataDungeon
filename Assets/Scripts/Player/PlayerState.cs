@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class PlayerState : MonoBehaviour
 {
-    [SerializeField] private int hp;
+    [SerializeField] private UIState hp;
+    [SerializeField] private UIState energy;
+    float runEnegry = 0.1f;
 
-    void ChangeHp(float amount)
+    private void Update()
     {
-        hp += (int)amount;
+        if (CharacterManager.Instance.Player.playerController.isRun)
+        {
+            energy.minusValue(runEnegry);
+        }
+        else
+        {
+            energy.plusValue(runEnegry);
+        }
     }
 }
