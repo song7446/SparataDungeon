@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// MapObject 상속 
 public class JumpObject : MapObject
 {
     // 점프대 점프 파워 

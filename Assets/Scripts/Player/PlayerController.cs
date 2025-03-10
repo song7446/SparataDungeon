@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     // 플레이어 리지드바디
     Rigidbody _rigidbody;
     // 기본 스피드
-    [SerializeField] private float _speed = 3f;
+    [SerializeField] private float _speed = 6f;
     // 아이템으로 얻을 수 있는 추가 스피드
     [SerializeField] float plusSpeed = 0f;
     // 기본 점프파워
@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
         // 아니면 기본 스피드 복귀
         else if (context.phase == InputActionPhase.Canceled)
         {
-            _speed = 3f;
+            _speed = 6f;
             isRun = false;
         }
     }
@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
         if (CharacterManager.Instance.Player.playerState.GetEnergy() <= 0f)
         {
             // 강제 달리기 금지 
-            _speed = 3f;
+            _speed = 6f;
         }
     }  
 
