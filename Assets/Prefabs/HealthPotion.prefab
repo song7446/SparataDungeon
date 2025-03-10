@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1037337402757816946}
   - component: {fileID: 221596102514408886}
   - component: {fileID: 710547786523112585}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HealthPotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,4 +148,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62a3a634b7dce344e800936dba68a3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 0}
+  itemData: {fileID: 11400000, guid: 7fb1e2d8ca923c24f8037760f39eacf6, type: 2}

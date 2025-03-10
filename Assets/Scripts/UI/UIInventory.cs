@@ -5,6 +5,7 @@ using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class UIInventory : MonoBehaviour
 {
@@ -33,37 +34,56 @@ public class UIInventory : MonoBehaviour
     public void OnInventorySelect(InputAction.CallbackContext context)
     {
         mouseScrollY = context.action.ReadValue<float>();
-        if (mouseScrollY > 0)
+        if (mouseScrollY < 0)
         {
             curidx++;
         }
-        else if (mouseScrollY < 0)
+        else if (mouseScrollY > 0)
         {
             curidx--;
         }
         curidx = Mathf.Clamp(curidx, 0, 10);
-        slots[curidx].transform.GetChild(0).GetComponent<Outline>().effectColor = Color.red;
+        InventorySelectColorChange();
+    }
+
+    public void OnDropItem(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            DropItem();
+        }
+    }
+
+    void InventorySelectColorChange()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (i == curidx)
+            {
+                slots[i].transform.GetChild(0).GetComponent<Outline>().effectColor = Color.red;
+            }
+            else
+            {
+                slots[i].transform.GetChild(0).GetComponent<Outline>().effectColor = Color.white;
+            }
+        }
     }
 
     public void PushItem(Items item)
     {
-        if (slots[curidx].item == null)
-        {
-            slots[curidx].item = item;
-            ChangeInventoryPrompt();
-        }
-        else
-        {
-            // 아이템 찬 상태 
-        }
+        DropItem();
+        slots[curidx].item = item;
+        ChangeInventoryPrompt();
     }
 
     public void DropItem()
     {
         if (slots[curidx].item != null)
         {
+            GameObject dropItem = Instantiate(slots[curidx].item.itemData.dropPrefab, CharacterManager.Instance.Player.transform.position + Vector3.up + Vector3.forward, Quaternion.identity);
             slots[curidx].item = null;
         }
+        ChangeInventoryPrompt();
     }
 
     void ChangeInventoryPrompt()

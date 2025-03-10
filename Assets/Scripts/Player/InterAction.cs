@@ -65,9 +65,11 @@ public class InterAction : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started)
         {
-            if (curLookObject.TryGetComponent<Items>(out Items item))
+            if (curLookObject != null && curLookObject.TryGetComponent<Items>(out Items item))
             {
                 UIManager.Instance.UIInventory.PushItem(item);
+                curLookObject.SetActive(false);
+                curLookObject = null;
             }
         }
     }

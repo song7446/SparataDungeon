@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Items : MonoBehaviour,InteractableObject
 {
-    [SerializeField] ItemData itemData;
+    public ItemData itemData;
     public string GetObjectName()
     {
         return itemData.displayName;
