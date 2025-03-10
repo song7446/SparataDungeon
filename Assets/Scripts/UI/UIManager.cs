@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
 
     public UIState uiHp;
     public UIState uiEnergy;
+    public UIInventory UIInventory;
 
     private void Awake()
     {

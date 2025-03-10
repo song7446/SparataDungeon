@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de44286ec4533a244b3c3a5bcced734a, type: 3}
   m_Name: SpeedPotion
   m_EditorClassIdentifier: 
-  displayName: "\uC18D\uB3C4\uC758 \uD3EC\uC158 "
+  displayName: "\uC18D\uB3C4\uD3EC\uC158 "
   description: "\uC0AC\uC6A9\uC2DC \uC18D\uB3C4\uAC00 \uBE68\uB77C\uC9D1\uB2C8\uB2E4"
   type: 1
   icon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}

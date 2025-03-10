@@ -61,11 +61,14 @@ public class InterAction : MonoBehaviour
         descriptionText.text = "";
     }
 
-    void OnInterAction(InputAction.CallbackContext context)
+    public void OnInterAction(InputAction.CallbackContext context)
     {
-        if(curLookObject != null)
+        if (context.phase == InputActionPhase.Started)
         {
-
+            if (curLookObject.TryGetComponent<Items>(out Items item))
+            {
+                UIManager.Instance.UIInventory.PushItem(item);
+            }
         }
     }
 }

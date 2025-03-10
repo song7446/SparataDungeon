@@ -9,7 +9,7 @@ public class UIState : MonoBehaviour
     public float curValue;
     public float maxValue;
     public Image barImage;
-
+    
     private void Update()
     {
         barImage.fillAmount = BarPercentage();
