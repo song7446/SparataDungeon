@@ -92,8 +92,8 @@ public class InterAction : MonoBehaviour
             {
                 // UIInventory에 아이템 넣기 
                 UIManager.Instance.UIInventory.PushItem(item);
-                // 최근 본 오브젝트 비활성화 - Destory 할려고 했지만 그렇게 하면 PushItem에서 넣은 item도 사라짐 
-                curLookObject.SetActive(false);
+                //curLookObject.SetActive(false);
+                Destroy(curLookObject);
                 // 최근 본 오브젝트 비우기 
                 curLookObject = null;
             }

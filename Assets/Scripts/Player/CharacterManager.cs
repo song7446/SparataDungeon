@@ -19,6 +19,7 @@ public class CharacterManager : MonoBehaviour
         }
     }
 
+    // 플레이어
     private Player _player;
 
     public Player Player

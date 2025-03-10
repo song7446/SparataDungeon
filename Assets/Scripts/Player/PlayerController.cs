@@ -153,30 +153,32 @@ public class PlayerController : MonoBehaviour
     // 카메라 각도 계산 함수 
     void CameraLook()
     {
-        // 카메라 각도 계산 - 입력된 마우스 값의 y(vector2로 입력 받아서 y로 사용하지만 사실 z)에 감도 곱해서 추가해주기
+        // 카메라 각도 계산 - 입력된 마우스 값의 y에 감도 곱해서 추가해주기
         cameraRot += mouseDelta.y * lookSensitivity;
         // 카메라 각도 최대 최소 사이 벗어나지 않게 하기 
         cameraRot = Mathf.Clamp(cameraRot, minCameraX, maxCameraX);
+        // 카메라의 x축 회전 조절 (위 아래)
         cameraContainer.localEulerAngles = new Vector3(-cameraRot, 0, 0);
-
+        // 입력된 마우스 값의 x에 감도 곱해서 플레이어의 y축 회전 조절 (좌우)
         transform.eulerAngles += new Vector3(0, mouseDelta.x * lookSensitivity, 0);
     }
 
+    // 아이템으로 얻은 스피드 
     public void ChangeSpeed(float amount)
     {
         plusSpeed = amount;
     }
-
+    // 아이템으로 얻은 스피드 되돌리기 
     public void ReturnSpeed()
     {
         plusSpeed = 0f;
     }
-
+    // 아이템으로 얻은 점프 파워
     public void ChangeJump(float amount)
     {
         plusJumpPower = amount;
     }
-
+    // 아이템으로 얻은 점프 파워 되돌리기
     public void ReturnJump()
     {
         plusJumpPower = 0f;
