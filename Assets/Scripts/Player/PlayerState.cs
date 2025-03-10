@@ -14,17 +14,17 @@ public class PlayerState : MonoBehaviour
     {
         if (CharacterManager.Instance.Player.playerController.isRun)
         {
-            energy.minusValue(runEnegry);
+            energy.MinusValue(runEnegry);
         }
         else
         {
-            energy.plusValue(runEnegry);
+            energy.PlusValue(runEnegry);
         }
     }
 
     public void Heal(float amount)
     {
-        hp.plusValue(amount);
+        hp.PlusValue(amount);
     }
 
     public void GetJump(ItemDataConcumable itemData)
@@ -37,5 +37,10 @@ public class PlayerState : MonoBehaviour
     {
         CharacterManager.Instance.Player.playerController.ChangeSpeed(itemData.value);
         returnPlus = CharacterManager.Instance.Player.playerController.ReturnSpeed;
+    }
+
+    public float GetEnergy()
+    {
+        return energy.GetValue();
     }
 }

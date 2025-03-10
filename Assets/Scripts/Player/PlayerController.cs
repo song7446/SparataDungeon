@@ -6,16 +6,26 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    // 움직임 관련 
     [Header("Move")]
+    // 움직임 입력
     Vector3 curInput;
+    // 플레이어 리지드바디
     Rigidbody _rigidbody;
+    // 기본 스피드
     [SerializeField] private float _speed = 3f;
+    // 아이템으로 얻을 수 있는 추가 스피드
     [SerializeField] float plusSpeed = 0f;
+    // 기본 점프파워
     [SerializeField] private float jumpPower = 3f;
+    // 아이템으로 얻을 수 있는 추가 점프 파워 
     [SerializeField] private float plusJumpPower = 0f;
+    // 바닥 레이어 마스크 - 점프할 때 바닥에 있는지 확인용
     [SerializeField] private LayerMask roadLayerMask;
+    // 달리고 있는지 확인용 
     public bool isRun = false;
 
+    // 시야 관련
     [Header("Look")]
     [SerializeField] public Transform cameraContainer;
     Vector2 mouseDelta;
@@ -37,6 +47,10 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        if (isRun)
+        {
+            StopRun();
+        }
     }
     private void LateUpdate()
     {
@@ -76,6 +90,15 @@ public class PlayerController : MonoBehaviour
             isRun = false;
         }
     }
+
+    void StopRun()
+    {
+        if (CharacterManager.Instance.Player.playerState.GetEnergy() <= 0f)
+        {
+            _speed = 3f;
+        }
+    }
+
     void Move()
     {
         Vector3 direction = transform.forward * curInput.y + transform.right * curInput.x;

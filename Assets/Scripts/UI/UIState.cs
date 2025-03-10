@@ -20,13 +20,18 @@ public class UIState : MonoBehaviour
         return curValue / maxValue;
     }
 
-    public void plusValue(float amount)
+    public void PlusValue(float amount)
     {
         curValue = Mathf.Min(curValue + amount, maxValue);
     }
 
-    public void minusValue(float amount) 
+    public void MinusValue(float amount) 
     {
         curValue = Mathf.Max(curValue - amount, 0);
+    }
+
+    public float GetValue()
+    {
+        return curValue;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 
 public class CharacterManager : MonoBehaviour
-{
+{  
     private static CharacterManager _instance;
 
     public static CharacterManager Instance
