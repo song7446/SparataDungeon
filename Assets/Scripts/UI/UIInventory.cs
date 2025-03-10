@@ -60,6 +60,7 @@ public class UIInventory : MonoBehaviour
         {
             slots[curidx].item.UseItem();
             slots[curidx].item = null;
+            ChangeInventoryPrompt();
         }
     }
 
@@ -89,7 +90,9 @@ public class UIInventory : MonoBehaviour
     {
         if (slots[curidx].item != null)
         {
-            GameObject dropItem = Instantiate(slots[curidx].item.itemData.dropPrefab, CharacterManager.Instance.Player.transform.position + Vector3.up + Vector3.forward, Quaternion.identity);
+            GameObject dropItem = Instantiate(slots[curidx].item.itemData.dropPrefab, 
+                CharacterManager.Instance.Player.playerController.cameraContainer.forward
+                + CharacterManager.Instance.Player.playerController.cameraContainer.up, Quaternion.identity);
             slots[curidx].item = null;
         }
         ChangeInventoryPrompt();

@@ -22,11 +22,13 @@ public class Items : MonoBehaviour, InteractableObject
             case ConsumableType.Health:
                 CharacterManager.Instance.Player.playerState.Heal(itemData.consumables[0].value);
                 break;
-            case ConsumableType.Energy:
-                CharacterManager.Instance.Player.playerState.GetEnergy(itemData.consumables[0].value);
+            case ConsumableType.Jump:
+                CharacterManager.Instance.Player.playerState.GetJump(itemData.consumables[0]);
+                UIManager.Instance.TimeCheck(itemData.consumables[0]);
                 break;
             case ConsumableType.Speed:
-                CharacterManager.Instance.Player.playerState.GetSpeed(itemData.consumables[0].value);
+                CharacterManager.Instance.Player.playerState.GetSpeed(itemData.consumables[0]);
+                UIManager.Instance.TimeCheck(itemData.consumables[0]);
                 break;
         }
     }

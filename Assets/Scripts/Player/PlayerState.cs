@@ -7,6 +7,7 @@ public class PlayerState : MonoBehaviour
 {
     [SerializeField] private UIState hp;
     [SerializeField] private UIState energy;
+    public Action returnPlus;
     float runEnegry = 0.1f;
 
     private void Update()
@@ -26,13 +27,15 @@ public class PlayerState : MonoBehaviour
         hp.plusValue(amount);
     }
 
-    public void GetEnergy(float amount)
+    public void GetJump(ItemDataConcumable itemData)
     {
-        energy.plusValue(amount);
+        CharacterManager.Instance.Player.playerController.ChangeJump(itemData.value);
+        returnPlus = CharacterManager.Instance.Player.playerController.ReturnJump;
     }
 
-    public void GetSpeed(float amount)
+    public void GetSpeed(ItemDataConcumable itemData)
     {
-        CharacterManager.Instance.Player.playerController.ChangeSpeed(amount);
+        CharacterManager.Instance.Player.playerController.ChangeSpeed(itemData.value);
+        returnPlus = CharacterManager.Instance.Player.playerController.ReturnSpeed;
     }
 }

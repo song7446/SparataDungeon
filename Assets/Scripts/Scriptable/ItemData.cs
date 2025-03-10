@@ -12,7 +12,7 @@ public enum ItemType
 public enum ConsumableType
 {
     Health,
-    Energy,
+    Jump,
     Speed,
 }
 
@@ -21,6 +21,7 @@ public class ItemDataConcumable
 {
     public ConsumableType type;
     public float value;
+    public float time;
 }
 
 [CreateAssetMenu(fileName = "Item", menuName = "New Item")]

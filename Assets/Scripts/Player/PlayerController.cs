@@ -12,11 +12,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _speed = 3f;
     [SerializeField] float plusSpeed = 0f;
     [SerializeField] private float jumpPower = 3f;
+    [SerializeField] private float plusJumpPower = 0f;
     [SerializeField] private LayerMask roadLayerMask;
     public bool isRun = false;
 
     [Header("Look")]
-    [SerializeField] private Transform cameraContainer;
+    [SerializeField] public Transform cameraContainer;
     Vector2 mouseDelta;
     float cameraRot;
     [SerializeField] private float lookSensitivity;
@@ -58,7 +59,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started && OnGround())
         {
-            _rigidbody.AddForce(Vector2.up * jumpPower, ForceMode.Impulse);
+            _rigidbody.AddForce(Vector2.up * (jumpPower + plusJumpPower), ForceMode.Impulse);
         }
     }
 
@@ -107,5 +108,20 @@ public class PlayerController : MonoBehaviour
     public void ChangeSpeed(float amount)
     {
         plusSpeed = amount;
+    }
+
+    public void ReturnSpeed()
+    {
+        plusSpeed = 0f;
+    }
+
+    public void ChangeJump(float amount)
+    {
+        plusJumpPower = amount;
+    }
+
+    public void ReturnJump()
+    {
+        plusJumpPower = 0f;
     }
 }

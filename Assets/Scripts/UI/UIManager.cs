@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
@@ -21,7 +22,7 @@ public class UIManager : MonoBehaviour
     public UIState uiHp;
     public UIState uiEnergy;
     public UIInventory UIInventory;
-    public UIState uiState;
+    public TextMeshProUGUI itemTime;
 
     private void Awake()
     {
@@ -34,5 +35,31 @@ public class UIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        itemTime.gameObject.SetActive(false);
+    }
+
+    public void ChangeItemTime(float time)
+    {
+        itemTime.text = time.ToString("N2");
+    }
+
+    public void TimeCheck(ItemDataConcumable itemData)
+    {
+        itemTime.gameObject.SetActive(true);
+        StartCoroutine(StopWatch(itemData));        
+    }
+
+    IEnumerator StopWatch(ItemDataConcumable itemData)
+    {
+        float time = itemData.time;
+        while (time > 0f)
+        {
+            time -= Time.deltaTime;
+            ChangeItemTime(time);
+            yield return null;
+        }
+        CharacterManager.Instance.Player.playerState.returnPlus?.Invoke();
+        itemTime.gameObject.SetActive(false);
+        yield return null;
     }
 }
