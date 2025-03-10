@@ -54,6 +54,15 @@ public class UIInventory : MonoBehaviour
         }
     }
 
+    public void OnUseItem(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started && slots[curidx].item != null)
+        {
+            slots[curidx].item.UseItem();
+            slots[curidx].item = null;
+        }
+    }
+
     void InventorySelectColorChange()
     {
         for (int i = 0; i < slots.Length; i++)

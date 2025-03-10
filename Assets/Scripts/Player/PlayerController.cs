@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     Vector3 curInput;
     Rigidbody _rigidbody;
     [SerializeField] private float _speed = 3f;
+    [SerializeField] float plusSpeed = 0f;
     [SerializeField] private float jumpPower = 3f;
     [SerializeField] private LayerMask roadLayerMask;
     public bool isRun = false;
@@ -77,7 +78,7 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         Vector3 direction = transform.forward * curInput.y + transform.right * curInput.x;
-        direction *= _speed;
+        direction *= _speed + plusSpeed;
         direction.y = _rigidbody.velocity.y;
         _rigidbody.velocity = direction;
     }
@@ -101,5 +102,10 @@ public class PlayerController : MonoBehaviour
         cameraContainer.localEulerAngles = new Vector3(-cameraRot, 0, 0);
 
         transform.eulerAngles += new Vector3(0, mouseDelta.x * lookSensitivity, 0);
+    }
+
+    public void ChangeSpeed(float amount)
+    {
+        plusSpeed = amount;
     }
 }

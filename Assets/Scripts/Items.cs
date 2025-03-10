@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Items : MonoBehaviour,InteractableObject
+public class Items : MonoBehaviour, InteractableObject
 {
     public ItemData itemData;
     public string GetObjectName()
@@ -15,4 +15,19 @@ public class Items : MonoBehaviour,InteractableObject
         return itemData.description;
     }
 
+    public void UseItem()
+    {
+        switch (itemData.consumables[0].type)
+        {
+            case ConsumableType.Health:
+                CharacterManager.Instance.Player.playerState.Heal(itemData.consumables[0].value);
+                break;
+            case ConsumableType.Energy:
+                CharacterManager.Instance.Player.playerState.GetEnergy(itemData.consumables[0].value);
+                break;
+            case ConsumableType.Speed:
+                CharacterManager.Instance.Player.playerState.GetSpeed(itemData.consumables[0].value);
+                break;
+        }
+    }
 }
