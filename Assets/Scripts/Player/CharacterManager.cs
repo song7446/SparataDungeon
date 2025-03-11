@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 
 public class CharacterManager : MonoBehaviour
-{
+{  
     private static CharacterManager _instance;
 
     public static CharacterManager Instance
@@ -19,9 +19,10 @@ public class CharacterManager : MonoBehaviour
         }
     }
 
-    private Character _player;
+    // 플레이어
+    private Player _player;
 
-    public Character Player
+    public Player Player
     {
         get
         {
