@@ -3,7 +3,7 @@
 <br>
 
 # 🎮 게임 실행 화면 프리뷰
-![Uploading 시연 영상.gif…]()
+![시연 영상](https://github.com/user-attachments/assets/71cdf7d8-31b0-4f8a-9c29-b6c92d9e1aed)
 
 
 # 📂 프로젝트 구조
